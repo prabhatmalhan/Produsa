@@ -24,3 +24,30 @@ class Node
         {
             d=d.trim();
             if(a=='\t');
+	    else
+            {
+                Node Fresh=new Node(d);
+                Fresh.link=Start;
+                Start=Fresh;
+            }
+            d=br.readLine();
+            if(d!=null)
+                a=d.charAt(0);
+            else
+                break;
+        }
+        br.close();
+        return Start;
+    }
+
+    protected int countNT(Node start)
+    {
+        int c=0;
+        while(start!=null)
+        {
+            ++c;
+            start=start.link;
+        }
+        return c;
+    }
+}
