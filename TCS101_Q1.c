@@ -6,7 +6,7 @@ int main(){
 		if(n%5==0)
 			printf("Area of square: %f",n*1.0*n);
 		else
-			printf("Area of circle: %f",22/7.0*n*n);
+			printf("Area of circle: %f",3.14*n*n);
 	}
 	return 0;
 }
